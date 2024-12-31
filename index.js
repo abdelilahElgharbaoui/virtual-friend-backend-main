@@ -14,7 +14,14 @@ const openai = new OpenAI({
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: '*', // Allow only requests from this origin
+  methods: 'GET,POST', // Allow only these methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
+};
+
+
+app.use(cors(corsOptions));
 const port = 3000;
 
 app.get("/", (req, res) => {
