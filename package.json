@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Backend for the virtual girlfriend app",
   "main": "index.js",
+  "engines": {
+    "node": "22.x"
+  },
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js --ext js"
+    "dev": "nodemon index.js --ext js",
+    "build": "node build --output public"
   },
   "author": "Wawa SENSEI <contact@wawasensei.dev>",
   "dependencies": {

@@ -22,7 +22,7 @@ const corsOptions = {
 
 
 app.use(cors(corsOptions));
-const port = 3000;
+const port = 3001;
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
